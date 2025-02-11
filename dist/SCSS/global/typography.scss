@@ -16,7 +16,7 @@ h1,h2,h3{
 p{
     color: var(--p);
     font-weight: 300;
-    font-size: rem(1);
+    font-size: pxToRem(16);
 }
 
 a, a:visited, a:active{

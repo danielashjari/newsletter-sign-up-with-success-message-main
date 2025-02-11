@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+:root {
+  --active-btn: gradiant(to right,hsl(347, 100%, 66%), hsl(4, 100%, 67%));
+  --btn:hsl(234, 29%, 20%);
+  --form-bg: hsl(0, 0%, 100%);
+  --form-bg-errorr:hsl(7, 100%, 95%);
+  --body-bg:hsl(235, 18%, 26%);
+  --h:hsl(234, 29%, 20%);
+  --p:hsl(234, 29%, 20%);
+}
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+.hidden {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
+
+h1, h2, h3, h4, p {
+  font-family: "Roboto", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  margin-top: 0rem;
+}
+
+h1, h2, h3 {
+  color: var(--h);
+}
+
+p {
+  color: var(--p);
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+a, a:visited, a:active {
+  text-decoration: none;
+}
+
+.sr-only {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}/*# sourceMappingURL=style.css.map */
