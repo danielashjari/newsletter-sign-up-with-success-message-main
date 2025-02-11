@@ -1,0 +1,21 @@
+@mixin flex ($direction, $align) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+}
+
+@mixin flex-center ($direction) {
+  @include flex($direction, center);
+}
+
+@mixin grid-columns ($columns, $gap) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $gap;
+}
+
+@mixin grid-row ($rows, $gap) {
+    display: grid;
+    grid-template-rows: repeat($rows, 1fr);
+    gap: $gap;
+}
