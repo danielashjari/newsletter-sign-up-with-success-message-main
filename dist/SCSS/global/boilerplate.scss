@@ -1,0 +1,18 @@
+@use '../util/' as *;
+
+html{
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*, *::after, *::before{
+    box-sizing: inherit;
+}
+
+.hidden{
+    display: none;
+};
+
+.flex{
+    display: flex;
+}

@@ -1,0 +1,28 @@
+// $size is mobile tablet laptop and pc which we choose in the main scss
+
+// 640px, 1024px, 1400px
+
+$breakpoint_up: (
+    "tablet": "40em",
+    "laptop": "64em",
+    "pc": "87.5em",
+);
+
+// 639px, 1023px,  1399px
+$breakpoint_down: (
+    "mobile": "39.9375em",
+    "tablet": "63.9375em",
+    "laptop": "87.4375em",
+);
+
+@mixin breakpoint($size) {
+    @media (min-width: map-get($breakpoint_up, $size)) {
+        @content;
+    }
+}
+
+@mixin breakpoint-down($size) {
+    @media (max-width: map-get($breakpoint_down, $size)) {
+        @content;
+    }
+}
