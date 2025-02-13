@@ -4,9 +4,6 @@ form{
     @include flex(column, center);
     gap: pxToRem(25);
     width: 100%;
-    @include breakpoint(tablet){
-        max-width: pxToRem(375);
-    }
     input{
         width: 100%;
         max-width: pxToRem(325);
@@ -22,9 +19,17 @@ form{
         background-color: var(--btn);
         color: var(--btn-txt);
         border-radius: pxToRem(10);
-
+        
         &:hover{
-           background: var(--active-btn);
+            background: var(--active-btn);
+            border: 0;
         }
+    }
+    @include breakpoint(tablet){
+        align-items: flex-start;
+        input,.btn{
+            max-width: pxToRem(375);
+        }
+        
     }
 }

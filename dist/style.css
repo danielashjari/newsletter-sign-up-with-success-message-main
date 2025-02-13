@@ -67,20 +67,18 @@ a, a:visited, a:active {
 }
 
 body {
-  color: var(--body-bg);
-  margin: 0;
+  background-color: var(--body-bg);
+  margin: 5% 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 body .container {
-  color: var(--card-bg);
+  background-color: var(--card-bg);
   flex-direction: column;
   justify-content: center;
   gap: 30px;
-}
-@media (min-width: 40em) {
-  body .container {
-    flex-direction: row-reverse;
-    align-items: center;
-  }
 }
 body .container picture {
   width: 100%;
@@ -121,17 +119,36 @@ body .container article li {
   color: hsl(228, 45%, 44%);
 }
 
+@media (min-width: 40em) {
+  body {
+    margin: 5% 0;
+  }
+  body .container {
+    flex-direction: row-reverse;
+    align-items: center;
+    max-width: 57.8125rem;
+    max-height: 40rem;
+    aspect-ratio: 3/2;
+    gap: 0;
+    border-radius: 1.25rem;
+  }
+  body .container picture {
+    padding: 1.5625rem;
+    width: 50%;
+  }
+  body .container picture img, body .container picture source {
+    border-radius: 0.9375rem;
+  }
+  body .container article {
+    padding-left: 4.0625rem;
+  }
+}
 form {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1.5625rem;
   width: 100%;
-}
-@media (min-width: 40em) {
-  form {
-    max-width: 23.4375rem;
-  }
 }
 form input {
   width: 100%;
@@ -150,4 +167,13 @@ form .btn {
 }
 form .btn:hover {
   background: var(--active-btn);
+  border: 0;
+}
+@media (min-width: 40em) {
+  form {
+    align-items: flex-start;
+  }
+  form input, form .btn {
+    max-width: 23.4375rem;
+  }
 }/*# sourceMappingURL=style.css.map */

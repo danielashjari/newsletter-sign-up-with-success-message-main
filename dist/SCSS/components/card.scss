@@ -1,10 +1,12 @@
 @use "../util" as *;
 body {
-    color: var(--body-bg);
-    margin: 0;
+    background-color: var(--body-bg);
+    margin: 5% 0;
+    padding: 0;
+    @include flex(column, center);
 
     .container {
-        color: var(--card-bg);
+        background-color: var(--card-bg);
         flex-direction: column;
         justify-content: center;
         gap: 30px;
@@ -51,5 +53,33 @@ body {
     text-align: center;
     a {
         color: hsl(228, 45%, 44%);
+    }
+}
+
+@include breakpoint(tablet){
+    body{
+        margin: 5% 0;
+
+        .container{
+            flex-direction: row-reverse;
+            align-items: center;
+            max-width: pxToRem(925);
+            max-height: pxToRem(640);
+            aspect-ratio: 3/2;
+            gap:0;
+            border-radius: pxToRem(20);
+
+            picture{
+                padding: pxToRem(25);
+                width: 50%;
+                img, source{
+                    border-radius: pxToRem(15);
+                }
+            }
+
+            article{
+                padding-left: pxToRem(65);
+            }
+        }
     }
 }
