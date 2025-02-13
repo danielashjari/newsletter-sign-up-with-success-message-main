@@ -1,7 +1,7 @@
 @use '../util/' as *;
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-h1,h2,h3,h4,p {
+h1,h2,h3,h4,p,li {
     font-family: "Roboto", serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -12,8 +12,12 @@ h1,h2,h3{
     color: var(--h);
 }
 
+h1{
+    font-weight: 700;
+    font-size: 48px;
+}
 
-p{
+p, li{
     color: var(--p);
     font-weight: 300;
     font-size: pxToRem(16);
