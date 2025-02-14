@@ -4,6 +4,10 @@ form{
     @include flex(column, center);
     gap: pxToRem(25);
     width: 100%;
+    label{
+        align-self: flex-start;
+    }
+
     input{
         width: 100%;
         max-width: pxToRem(325);

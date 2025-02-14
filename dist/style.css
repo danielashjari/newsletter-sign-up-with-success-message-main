@@ -6,8 +6,9 @@
   --form-border: hsl(231, 7%, 60%);
   --card-bg: hsl(0, 0%, 100%);
   --btn-txt: hsl(0, 0%, 100%);
-  --form-bg-errorr:hsl(7, 100%, 95%);
-  --body-bg:hsl(235, 18%, 26%);
+  --form-bg-error:hsl(7, 100%, 95%);
+  --body-bg-desktop:hsl(235, 18%, 26%);
+  --body-bg-mobile:hsl(0, 0%, 100%);
   --h:hsl(234, 29%, 20%);
   --p:hsl(234, 29%, 20%);
 }
@@ -29,7 +30,7 @@ html {
   display: flex;
 }
 
-h1, h2, h3, h4, p, li {
+h1, h2, h3, h4, p, li, .p-design {
   font-family: "Roboto", serif;
   font-optical-sizing: auto;
   font-style: normal;
@@ -45,7 +46,7 @@ h1 {
   font-size: 48px;
 }
 
-p, li {
+p, li, .p-design {
   color: var(--p);
   font-weight: 300;
   font-size: 1rem;
@@ -67,8 +68,8 @@ a, a:visited, a:active {
 }
 
 body {
-  background-color: var(--body-bg);
-  margin: 5% 0;
+  background-color: var(--body-bg-mobile);
+  margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -112,8 +113,10 @@ body .container article li {
 }
 
 .attribution {
+  background-color: var(--card-bg);
   font-size: 0.6875rem;
   text-align: center;
+  width: 100%;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
@@ -121,11 +124,14 @@ body .container article li {
 
 @media (min-width: 40em) {
   body {
-    margin: 5% 0;
+    margin: 5%;
+    background-color: var(--body-bg-desktop);
   }
   body .container {
+    padding: 1.5625rem 0;
     flex-direction: row-reverse;
     align-items: center;
+    width: 75%;
     max-width: 57.8125rem;
     max-height: 40rem;
     aspect-ratio: 3/2;
@@ -142,6 +148,10 @@ body .container article li {
   body .container article {
     padding-left: 4.0625rem;
   }
+  body .attribution {
+    background-color: var(--body-bg-desktop);
+    margin-top: 0.3125rem;
+  }
 }
 form {
   display: flex;
@@ -149,6 +159,9 @@ form {
   align-items: center;
   gap: 1.5625rem;
   width: 100%;
+}
+form label {
+  align-self: flex-start;
 }
 form input {
   width: 100%;

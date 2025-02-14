@@ -1,7 +1,7 @@
 @use "../util" as *;
 body {
-    background-color: var(--body-bg);
-    margin: 5% 0;
+    background-color: var(--body-bg-mobile);
+    margin: 0;
     padding: 0;
     @include flex(column, center);
 
@@ -49,8 +49,10 @@ body {
 }
 
 .attribution {
+    background-color: var(--card-bg);
     font-size: pxToRem(11);
     text-align: center;
+    width: 100%;
     a {
         color: hsl(228, 45%, 44%);
     }
@@ -58,11 +60,14 @@ body {
 
 @include breakpoint(tablet){
     body{
-        margin: 5% 0;
-
+        margin: 5%;
+        background-color: var(--body-bg-desktop);
+        
         .container{
+            padding:pxToRem(25) 0;
             flex-direction: row-reverse;
             align-items: center;
+            width: 75%;
             max-width: pxToRem(925);
             max-height: pxToRem(640);
             aspect-ratio: 3/2;
@@ -80,6 +85,11 @@ body {
             article{
                 padding-left: pxToRem(65);
             }
+        }
+
+        .attribution{
+            background-color: var(--body-bg-desktop);
+            margin-top: pxToRem(5);
         }
     }
 }

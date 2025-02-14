@@ -5,9 +5,10 @@
     --form-border: hsl(231, 7%, 60%);
     --card-bg: hsl(0, 0%, 100%); // used if needed if not remove
     --btn-txt: hsl(0, 0%, 100%); // used if needed if not remove
-    --form-bg-errorr:hsl(7, 100%, 95%);
+    --form-bg-error:hsl(7, 100%, 95%);
 
-    --body-bg:hsl(235, 18%, 26%);
+    --body-bg-desktop:hsl(235, 18%, 26%);
+    --body-bg-mobile:hsl(0, 0%, 100%);
     --h:hsl(234, 29%, 20%);
     --p:hsl(234, 29%, 20%);
 }
