@@ -1,11 +1,28 @@
 @use '../util/' as*;
 
 form{
-    @include flex(column, center);
-    gap: pxToRem(25);
+    @include flex(column, stretch);
     width: 100%;
+    max-width: pxToRem(325);
     label{
         align-self: flex-start;
+    }
+    
+    .error-container{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items:center;
+    }
+
+    .email-label{
+        margin-bottom: 5px;
+        font-size: 11px;
+    }
+    .error-message{
+        color: var(--error-message);
+        font-size: 11px;
+        text-align: end;
     }
 
     input{
@@ -14,6 +31,7 @@ form{
         border: 1px solid var(--form-border);
         border-radius: pxToRem(10);
         height: pxToRem(55);
+        margin-bottom: 25px;
     }
     
     .btn{
@@ -28,11 +46,18 @@ form{
             background: var(--active-btn);
             border: 0;
         }
+
     }
+
     @include breakpoint(tablet){
         align-items: flex-start;
+        max-width: pxToRem(375);
         input,.btn{
             max-width: pxToRem(375);
+        }
+
+        .email-label, .error-message{
+            font-size: 13px;
         }
         
     }

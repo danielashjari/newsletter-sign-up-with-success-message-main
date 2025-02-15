@@ -40,9 +40,13 @@
       </ul>
 
       <form id="form" novalidate>
-        <label for="email" class="p-design">Email address</label>
         
-        <span aria-live="polite" id="error-message"></span>
+        <div class="error-container">
+          <label for="email" class="p-design email-label">Email address</label>
+          
+          <span aria-live="polite" id="error-message" class="p-design error-message"></span>
+          
+        </div>
         
         <input type="email" id="email" name="email" placeholder=" email@company.com" required>
         

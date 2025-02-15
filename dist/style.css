@@ -7,6 +7,8 @@
   --card-bg: hsl(0, 0%, 100%);
   --btn-txt: hsl(0, 0%, 100%);
   --form-bg-error:hsl(7, 100%, 95%);
+  --form-bg-error:hsl(7, 100%, 95%);
+  --error-message: hsl(4, 100%, 67%);
   --body-bg-desktop:hsl(235, 18%, 26%);
   --body-bg-mobile:hsl(0, 0%, 100%);
   --h:hsl(234, 29%, 20%);
@@ -156,12 +158,27 @@ body .container article li {
 form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 1.5625rem;
+  align-items: stretch;
   width: 100%;
+  max-width: 20.3125rem;
 }
 form label {
   align-self: flex-start;
+}
+form .error-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+form .email-label {
+  margin-bottom: 5px;
+  font-size: 11px;
+}
+form .error-message {
+  color: var(--error-message);
+  font-size: 11px;
+  text-align: end;
 }
 form input {
   width: 100%;
@@ -169,6 +186,7 @@ form input {
   border: 1px solid var(--form-border);
   border-radius: 0.625rem;
   height: 3.4375rem;
+  margin-bottom: 25px;
 }
 form .btn {
   width: 100%;
@@ -185,8 +203,12 @@ form .btn:hover {
 @media (min-width: 40em) {
   form {
     align-items: flex-start;
+    max-width: 23.4375rem;
   }
   form input, form .btn {
     max-width: 23.4375rem;
+  }
+  form .email-label, form .error-message {
+    font-size: 13px;
   }
 }/*# sourceMappingURL=style.css.map */
