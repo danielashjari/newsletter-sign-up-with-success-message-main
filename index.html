@@ -15,64 +15,75 @@
 </head>
 
 <body>
-
   <!-- Sign-up form start -->
-  <div class="container sign-up  flex">
-    <picture>
-      <source media="(min-width: 768px)" srcset="./assets/images/illustration-sign-up-desktop.svg">
-      <source media="(min-width: 320px)" srcset="./assets/images/illustration-sign-up-mobile.svg">
-      <img src="./assets/images/illustration-mobile.svg" alt="Illustration">
-    </picture>
+  <div class="wrapper">
+    <div class="container sign-up  flex">
+      <picture>
+        <source media="(min-width: 768px)" srcset="./assets/images/illustration-sign-up-desktop.svg">
+        <source media="(min-width: 320px)" srcset="./assets/images/illustration-sign-up-mobile.svg">
+        <img src="./assets/images/illustration-mobile.svg" alt="Illustration">
+      </picture>
 
-    <article>
-      <h1>
-        Stay updated!
-      </h1>
+      <article>
+        <h1>
+          Stay updated!
+        </h1>
 
-      <p>
-        Join 60,000+ product managers receiving monthly updates on:
-      </p>
+        <p>
+          Join 60,000+ product managers receiving monthly updates on:
+        </p>
 
-      <ul>
-        <li>Product discovery and building what matters</li>
-        <li>Measuring to ensure updates are a success</li>
-        <li>And much more!</li>
-      </ul>
+        <ul>
+          <li>Product discovery and building what matters</li>
+          <li>Measuring to ensure updates are a success</li>
+          <li>And much more!</li>
+        </ul>
 
-      <form id="form" novalidate>
-        
-        <div class="error-container">
-          <label for="email" class="p-design email-label">Email address</label>
-          
-          <span aria-live="polite" id="error-message" class="p-design error-message"></span>
-          
-        </div>
-        
-        <input type="email" id="email" name="email" placeholder=" email@company.com" required>
-        
-        <button type="submit" class="btn"> Subscribe to monthly newsletter
-        </button>
-      </form>
-    </article>
+        <form id="form" novalidate>
+
+          <div class="error-container">
+            <label for="email" class="p-design email-label">Email address</label>
+
+            <span aria-live="polite" id="error-message" class="p-design error-message"></span>
+
+          </div>
+
+          <input type="email" id="email" name="email" placeholder=" email@company.com" required>
+
+          <button type="submit" class="btn"> Subscribe to monthly newsletter
+          </button>
+        </form>
+      </article>
+    </div>
+
   </div>
 
   <!-- Sign-up form end -->
 
   <!-- Success message start -->
+  <div class="wrapper">
+    <div class="message hidden">
+      <img src="./assets/images/icon-list.svg" alt="tick" class="tick-img">
+      <h1>
+        Thanks for subscribing!
+      </h1>
+      <p>
+        A confirmation email has been sent to <span class="your-email"></span>.
+        Please open it and click the button inside to confirm your subscription.
+      </p>
 
-  <div class="message container hidden">
-    Thanks for subscribing!
+      <button type="submit" class="btn"> Dismiss message
+      </button>
 
-   A confirmation email has been sent to ash@loremcompany.com. 
-    Please open it and click the button inside to confirm your subscription.
+    </div>
 
-    Dismiss message
   </div>
   <!-- Success message end -->
 
   <footer class="attribution">
-    <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener">Frontend Mentor</a>.
-    Coded by <a href="#">Danial Ashjari</a>.</p>
+    <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener">Frontend
+        Mentor</a>.
+      Coded by <a href="#">Danial Ashjari</a>.</p>
   </footer>
 </body>
 
