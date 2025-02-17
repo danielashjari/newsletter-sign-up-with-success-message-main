@@ -69,6 +69,15 @@ a, a:visited, a:active {
   position: absolute;
 }
 
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .container {
+  text-align: center;
+}
+
 body {
   background-color: var(--body-bg-mobile);
   margin: 0;
@@ -210,5 +219,43 @@ form .btn:hover {
   }
   form .email-label, form .error-message {
     font-size: 13px;
+  }
+}
+
+.wrapper .message {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-color: var(--card-bg);
+  border-radius: 1.25rem;
+  padding: 1.5625rem;
+  height: 100vh;
+}
+.wrapper .message .tick-img {
+  width: 4.0625rem;
+  height: 4.0625rem;
+  margin-bottom: 1.25rem;
+}
+.wrapper .message .btn {
+  width: 100%;
+  max-width: 20.3125rem;
+  height: 3.4375rem;
+  background-color: var(--btn);
+  color: var(--btn-txt);
+  border-radius: 0.625rem;
+}
+.wrapper .message .btn:hover {
+  background: var(--active-btn);
+  border: 0;
+}
+@media (min-width: 40em) {
+  .wrapper .message {
+    max-width: 25rem;
+    max-height: 26.25rem;
+    aspect-ratio: 1/1;
+    padding: 1.875rem;
+  }
+  .wrapper .message h1 {
+    margin-bottom: 5px;
   }
 }/*# sourceMappingURL=style.css.map */

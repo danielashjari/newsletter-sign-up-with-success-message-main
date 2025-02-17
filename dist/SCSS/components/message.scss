@@ -1,0 +1,46 @@
+@use '../util/' as*;
+.wrapper{
+    .message{
+        
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        background-color: var(--card-bg);
+        border-radius: pxToRem(20);
+        padding: pxToRem(25);
+        height: 100vh;
+    
+    
+        .tick-img{
+            width: pxToRem(65);
+            height: pxToRem(65);
+            margin-bottom: pxToRem(20);
+        }
+    
+        .btn{
+            width: 100%;
+            max-width: pxToRem(325);
+            height: pxToRem(55);
+            background-color: var(--btn);
+            color: var(--btn-txt);
+            border-radius: pxToRem(10);
+            
+            &:hover{
+                background: var(--active-btn);
+                border: 0;
+            }
+    
+        }
+    
+        @include breakpoint(tablet){
+            max-width: pxToRem(400);
+            max-height: pxToRem(420);
+            aspect-ratio: 1/1;
+            padding: pxToRem(30);
+            h1{
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+}
