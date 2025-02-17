@@ -20,6 +20,10 @@ function formValidation() {
         errorMessage.innerHTML = ' ';
 
         //gotta add lines to change the display attribute but before that gotta fix style n html
+        messageHolder.classList.toggle('hidden');
+        messageHolder.classList.toggle('flex');
+        signUpHolder.classList.toggle('flex');
+        signUpHolder.classList.toggle('hidden');
     }
 }
 
