@@ -109,6 +109,7 @@ body .container picture source {
 }
 body .container article {
   margin: 0 1.25rem;
+  text-align: left;
 }
 body .container article ul {
   list-style-type: none;
