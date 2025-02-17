@@ -24,6 +24,7 @@ function formValidation() {
         messageHolder.classList.toggle('flex');
         signUpHolder.classList.toggle('flex');
         signUpHolder.classList.toggle('hidden');
+        toInitialPage();
     }
 }
 
@@ -32,3 +33,14 @@ const isValidEmail = (email) => {
         /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
 };
+
+function toInitialPage() {
+    const dismissBtn = document.getElementById('dismiss-btn');
+    dismissBtn.addEventListener('click', () => {
+        messageHolder.classList.toggle('hidden');
+        messageHolder.classList.toggle('flex');
+        signUpHolder.classList.toggle('flex');
+        signUpHolder.classList.toggle('hidden');
+        email.value = '';
+    });
+}
